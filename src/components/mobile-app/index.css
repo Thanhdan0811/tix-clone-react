@@ -1,0 +1,104 @@
+.tixApp {
+    padding: 120px 0 80px;
+    background: url("../../assests/images/background-app.jpg");
+  }
+  .tixApp .tixApp-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tixApp .tixApp-wrap .app-item {
+    color: #fff;
+  }
+  .tixApp .tixApp-wrap .app-left {
+    flex: 0 1 50%;
+  }
+  .tixApp .tixApp-wrap .app-left h1 {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .tixApp .tixApp-wrap .app-left p {
+    font-size: 16px;
+    color: #fff;
+    padding: 0px 0 15px;
+  }
+  .tixApp .tixApp-wrap .app-left button {
+    background: #fb4226;
+    font-weight: 700;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+  }
+  .tixApp .tixApp-wrap .app-left .down {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+  .tixApp .tixApp-wrap .app-left .down a {
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+  .tixApp .tixApp-wrap .app-right {
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+
+  .tixApp .tixApp-wrap .app-right .phone-img {
+    width: 195px;
+    position: relative;
+  }
+  .tixApp .tixApp-wrap .app-right .phone-img > img {
+    display: block;
+    width: 100%;
+  }
+  .tixApp .tixApp-wrap .app-right .phone-img .slide-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 96%;
+  }
+  .tixApp .tixApp-wrap .app-right .phone-img .slide-img .tixAppCarousel {
+    height: 100%;
+  }
+  .tixApp .tixApp-wrap .app-right .phone-img .slide-img .tixAppCarousel .owl-stage-outer {
+    height: 100%;
+    border-radius: 20px;
+  }
+  .tixApp .tixApp-wrap .app-right .phone-img .slide-img .tixAppCarousel .owl-stage-outer .owl-item img {
+    border-radius: 20px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .tixApp .tixApp-wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .tixApp .tixApp-wrap .app-left {
+      flex: 0 1 100%;
+      text-align: center;
+    }
+    .tixApp .tixApp-wrap .app-right {
+      flex: 0 1 100%;
+    }
+    .tixApp .tixApp-wrap .app-right .phone-img {
+      width: 260px;
+    }
+    .tixApp .tixApp-wrap .app-right .phone-img .slide-img .tixAppCarousel {
+      height: 100%;
+    }
+    .tixApp .tixApp-wrap .app-right .phone-img .slide-img .tixAppCarousel .owl-stage-outer {
+      height: 100%;
+    }
+  }

@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from './components/banner';
+import SliderFilms from './components/carousel-films';
+import Cinemas from './components/cinemas';
+import Contacts from './components/contacts';
+import FilmDetail from './components/film-detail';
+import Footer from './components/footer';
+import Header from './components/header';
+import MobileApp from './components/mobile-app';
+import News from './components/news';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <FilmDetail/>
+      
+      {/* <Banner/> 
+      <SliderFilms/>
+      <Cinemas/>
+      <News/>
+      <MobileApp/> */}
+      <Contacts/>
+      <Footer />
+    </>
   );
 }
 
