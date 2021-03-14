@@ -1,0 +1,116 @@
+.checkout-wrap {
+
+}
+.step-checkout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+    background: #fff;
+    height: 80px;
+    width: 75%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-steps {
+    display: flex;
+}
+.step-item {
+    line-height: 80px;
+    font-weight: 500;
+    padding: 0 30px;
+}
+.step-item.active {
+    color: #fb4226;
+}
+.step-number {
+    font-size: 18px;
+    padding-right: 5px;
+}
+.step-user {
+    display: flex;
+    align-items: center;
+    color: #9b9b9b;
+}
+.step--img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.checkout-info-wrap {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 27%;
+    background: #fff;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+    height: 100%;
+    padding: 0 30px;
+}
+.checkout-info {
+
+}
+.checkout-film-info,
+.checkout-chair {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9e9e9;
+}
+.checkout-film-info p {
+    margin-bottom: 5px;
+}
+.total-price {
+    color: #44c020;
+    font-weight: 500;
+    font-size: 16px;
+}
+.title {
+    font-size: 34px;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e9e9e9;
+}
+.checkout-chair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chairs {
+    font-weight: 500;
+    color: #fb4226;
+}
+.checkout-user {
+
+}
+.checkout-user-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9e9e9;
+    position: relative;
+}
+.checkout-user-item label {
+    display: block;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+.checkout-user-item input {
+    color: #000;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+.checkout-user-item input::placeholder {
+    color: #000;
+}
+.checkout-user-item .btn-apply {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #afafaf;
+    color: #fff;
+    font-size: 13px;
+}
