@@ -10,13 +10,15 @@ function SignUp() {
                         <img src={logoForm} className="img"alt=""/>
                     </div>
                     <form>
-                        <div className="form-group">
-                            <label htmlFor="sign-up-name">Họ tên</label>
-                            <input type="text" className="form-control" id="sign-up-name"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="sign-up-username">Tên Đăng Nhập</label>
-                            <input type="text" className="form-control" id="sign-up-username"/>
+                        <div className="row">
+                            <div className="col-12 col-md-6 form-group">
+                                <label htmlFor="sign-up-name">Họ tên</label>
+                                <input type="text" className="form-control" id="sign-up-name"/>
+                            </div>
+                            <div className="col-12 col-md-6 form-group">
+                                <label htmlFor="sign-up-username">Tên Đăng Nhập</label>
+                                <input type="text" className="form-control" id="sign-up-username"/>
+                            </div>
                         </div>
                         <div className="form-group">
                             <label htmlFor="sign-up-email">E-mail</label>
