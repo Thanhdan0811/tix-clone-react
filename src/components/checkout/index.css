@@ -224,3 +224,109 @@
     height: 100%;
     background-color: rgba(0,0,0,0.3);
 }
+
+/* Chiar */
+.seat {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    
+    background: #3e515d;
+    color: #e9e9e9;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.seat-couple {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #b03550;
+    margin: 0 10px;
+}
+.seat-couple .seat {
+    background: inherit;
+    margin: 0;
+}
+.seat-vip {
+    background: #f7b500;
+}
+.seat-selected {
+    position: relative;
+    background: #e7eaec
+}
+.seat-selected::after {
+    content: "x";   
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.seat-on-select {
+    background: #44c020;
+}
+.seats-wrap {
+    width: fit-content;
+    margin: auto;
+}
+.seats-item {
+    display: flex;
+    margin: 10px 0;
+}
+.seats-item .seats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.seats-row {
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+    .step-checkout {
+        width: 100%;
+        z-index: 3;
+    }
+    .checkout-info-wrap {
+        position: static;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    .book-ticket {
+        position: static;
+    }
+    .film-bg {
+        display: none;
+    }
+    .cinema-chairs {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .step-item {
+        padding: 0 8px;
+    }
+}
+@media screen and (max-width: 567px) {
+    .step-checkout {
+        padding: 0 10px;
+    }
+    .step-item {
+        font-size: 12px;
+        line-height: unset;
+    }
+    .step-number {
+        font-size: 14px;
+    }
+}

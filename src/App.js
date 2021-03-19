@@ -16,9 +16,9 @@ function App() {
     <>
       {/* <Header/> */}
       {/* <FilmDetail/> */}
-      {/* <Checkout/> */}
+      <Checkout/>
       {/* <SignIn/> */}
-      <SignUp/>
+      {/* <SignUp/> */}
       {/* <Banner/> 
       <SliderFilms/>
       <Cinemas/>
