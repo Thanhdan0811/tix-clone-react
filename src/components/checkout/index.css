@@ -329,4 +329,15 @@
     .step-number {
         font-size: 14px;
     }
+    /* seats */
+    .seats-row {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .seat {
+        width: 18px;
+        height: 18px;
+        margin: 0 2px;
+        border-radius: 3px;
+    }
 }
