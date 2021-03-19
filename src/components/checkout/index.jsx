@@ -629,6 +629,38 @@ function Checkout() {
                     <div className="seats-wrap">
                         {renderAllSeats()}
                     </div>
+                    <div className="explain-seats">
+                        {/* explain item */}
+                        <div className="explain-item">
+                            <span className="seat"></span>
+                            <p>Ghế thường</p>
+                        </div>
+                        {/* end explain item */}
+                        {/* explain item */}
+                        <div className="explain-item">
+                            <span className="seat seat-vip"></span>
+                            <p>Ghế vip</p>
+                        </div>
+                        {/* end explain item */}
+                        {/* explain item */}
+                        <div className="explain-item">
+                            <span className="seat seat-couple"></span>
+                            <p>Ghế đôi</p>
+                        </div>
+                        {/* end explain item */}
+                        {/* explain item */}
+                        <div className="explain-item">
+                            <span className="seat seat-selected"></span>
+                            <p>Ghế đã chọn</p>
+                        </div>
+                        {/* end explain item */}
+                        {/* explain item */}
+                        <div className="explain-item">
+                            <span className="seat seat-on-select"></span>
+                            <p>Ghế đang chọn</p>
+                        </div>
+                        {/* end explain item */}
+                    </div>
                 </div>
             </div>
             {/* end all chairs */}
