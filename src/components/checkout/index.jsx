@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./index.css";
 import userImg from "../../assests/images/user-default-avarta.png";
 import zaloPay from "../../assests/images/payment-zalo.jpg";
@@ -12,574 +12,646 @@ import filmbg from "../../assests/images/screen-film-bg.jpg";
 import WeekendIcon from '@material-ui/icons/Weekend';
 
 // Seats 
-const seatsData = [
-	{ 
-		rowSeat: "A",
-		seats : [
+const seatsData = {
+	"A" : [
+		{
+			typeSeat: "normal",
+			seatNumber: 1,
+			seatName: "A01",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 2,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 3,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 4,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 5,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 6,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 7,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 8,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 9,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 10,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 11,
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 12,
+			status: false,
+			price: 85000,
+		},
+	    ],
+	"B" : [
+		{
+			typeSeat: "normal",
+			seatNumber: 1,
+			seatName: "B01",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 2,
+			seatName: "B02",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 3,
+			seatName: "B03",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 4,
+			seatName: "B04",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 5,
+			seatName: "B05",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 6,
+			seatName: "B06",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 7,
+			seatName: "B07",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 8,
+			seatName: "B08",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 9,
+			seatName: "B09",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 10,
+			seatName: "B10",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 11,
+			seatName: "B11",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 12,
+			seatName: "B12",
+			status: false,
+			price: 85000,
+		},
+	    ],
+	"C" : [
+		{
+			typeSeat: "normal",
+			seatNumber: 1,
+			seatName: "C01",
+			status: true,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 2,
+			seatName: "C02",
+			status: true,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 3,
+			seatName: "C03",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 4,
+			seatName: "C04",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 5,
+			seatName: "C05",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 6,
+			seatName: "C06",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 7,
+			seatName: "C07",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 8,
+			seatName: "C08",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 9,
+			seatName: "C09",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 10,
+			seatName: "C10",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 11,
+			seatName: "C11",
+			status: false,
+			price: 85000,
+		},
+		{
+			typeSeat: "normal",
+			seatNumber: 12,
+			seatName: "C12",
+			status: false,
+			price: 85000,
+		},
+	    ],
+	"D" : [
 			{
 				typeSeat: "normal",
 				seatNumber: 1,
+                seatName: "D01",
+				status: false,
+                price: 85000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 2,
+                seatName: "D02",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 3,
+                seatName: "D03",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 4,
+                seatName: "D04",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 5,
+                seatName: "D05",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 6,
+                seatName: "D06",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 7,
+                seatName: "D07",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 8,
+                seatName: "D08",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 9,
+                seatName: "D09",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 10,
+                seatName: "D10",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "vip",
+				seatNumber: 11,
+                seatName: "D11",
+				status: false,
+                price: 95000,
+			},
+			{
+				typeSeat: "normal",
+				seatNumber: 12,
+                seatName: "D12",
+				status: false,
+                price: 85000,
+			},
+		],
+	"E" : [
+			{
+				typeSeat: "normal",
+				seatNumber: 1,
+                seatName: "E01",
 				status: false,
                 price: 85000,
 			},
 			{
 				typeSeat: "normal",
 				seatNumber: 2,
+                seatName: "E02",
 				status: false,
                 price: 85000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 3,
+                seatName: "E03",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 4,
+                seatName: "E04",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 5,
+                seatName: "E05",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 6,
+                seatName: "E06",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 7,
+                seatName: "E07",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 8,
+                seatName: "E08",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 9,
+                seatName: "E09",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 10,
+                seatName: "E10",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
 				typeSeat: "normal",
 				seatNumber: 11,
+                seatName: "E11",
 				status: false,
                 price: 85000,
 			},
 			{
 				typeSeat: "normal",
 				seatNumber: 12,
+                seatName: "E12",
 				status: false,
                 price: 85000,
 			},
-		]
-	},
-	{
-		rowSeat: "B",
-        seats : [
+		],
+	"F" : [
 			{
 				typeSeat: "normal",
 				seatNumber: 1,
+                seatName: "F01",
 				status: false,
                 price: 85000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 2,
+                seatName: "F02",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 3,
+                seatName: "F03",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 4,
+                seatName: "F04",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 5,
+                seatName: "F05",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 6,
+                seatName: "F06",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 7,
+                seatName: "F07",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 8,
+                seatName: "F08",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
-				typeSeat: "normal",
+				typeSeat: "vip",
 				seatNumber: 9,
+                seatName: "F09",
 				status: false,
-                price: 85000,
+                price: 95000,
 			},
 			{
 				typeSeat: "normal",
 				seatNumber: 10,
+                seatName: "F10",
 				status: false,
                 price: 85000,
 			},
-			{
-				typeSeat: "normal",
-				seatNumber: 11,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 12,
-				status: false,
-                price: 85000,
-			},
-		]
-	},
-	{
-		rowSeat: "C",
-        seats : [
+		],
+	"G" : [
 			{
 				typeSeat: "normal",
 				seatNumber: 1,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 2,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 3,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 4,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 5,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 6,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 7,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 8,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 9,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 10,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 11,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 12,
-				status: false,
-                price: 85000,
-			},
-		]
-	},
-    {
-        rowSeat: "D",
-        seats : [
-			{
-				typeSeat: "normal",
-				seatNumber: 1,
+                seatName: "G01",
 				status: false,
                 price: 85000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 2,
+                seatName: "G02",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 3,
+                seatName: "G03",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 4,
+                seatName: "G04",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 5,
+                seatName: "G05",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 6,
+                seatName: "G06",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 7,
+                seatName: "G07",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 8,
+                seatName: "G08",
 				status: false,
                 price: 95000,
 			},
 			{
 				typeSeat: "vip",
 				seatNumber: 9,
+                seatName: "G09",
 				status: false,
                 price: 95000,
 			},
 			{
-				typeSeat: "vip",
+				typeSeat: "normal",
 				seatNumber: 10,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 11,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 12,
+                seatName: "G10",
 				status: false,
                 price: 85000,
 			},
-		]
-    },
-    {
-        rowSeat: "E",
-        seats : [
-			{
-				typeSeat: "normal",
-				seatNumber: 1,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 2,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 3,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 4,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 5,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 6,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 7,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 8,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 9,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 10,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 11,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 12,
-				status: false,
-                price: 85000,
-			},
-		]
-    },
-    {
-        rowSeat: "F",
-        seats : [
-			{
-				typeSeat: "normal",
-				seatNumber: 2,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 3,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 4,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 5,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 6,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 7,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 8,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 9,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 10,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 11,
-				status: false,
-                price: 85000,
-			},
-		]
-    },
-    {
-        rowSeat: "G",
-        seats : [
-			{
-				typeSeat: "normal",
-				seatNumber: 2,
-				status: false,
-                price: 85000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 3,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 4,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 5,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 6,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 7,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 8,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 9,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "vip",
-				seatNumber: 10,
-				status: false,
-                price: 95000,
-			},
-			{
-				typeSeat: "normal",
-				seatNumber: 11,
-				status: false,
-                price: 85000,
-			},
-		]
-    },
-    {
-        rowSeat: "H",
-        seats : [
+		],
+	"H" : [
 			{
 				typeSeat: "couple",
 				seatNumber: 1,
+                seatName: "H01, H02",
 				status: false,
                 price: 155000,
 			},
 			{
 				typeSeat: "couple",
 				seatNumber: 3,
+                seatName: "H03, H04",
 				status: false,
                 price: 155000,
 			},
 			{
 				typeSeat: "couple",
 				seatNumber: 5,
+                seatName: "H05, H06",
 				status: false,
                 price: 155000,
 			},
 			{
 				typeSeat: "couple",
 				seatNumber: 7,
+                seatName: "H07, H08",
 				status: false,
                 price: 155000,
 			},
 			
-		]
-    },	
-]
+		],
+}
 
 function Checkout() {
+    // hooks initial
+    useEffect(()=> {
+        let seatWrap = document.querySelector(".seats-wrap");
+        seatWrap.addEventListener("click", (e) => {
+            if(!e.target.classList.contains("seat")) return;
+            let seatClicked = e.target.dataset.seat;
+            console.log(seatsData[seatClicked.substr(0,1)].filter((item) => item.seatName === seatClicked));
+
+        })
+    }, [])
+    
+    // render seats in a row
     let renderSeats = function(seatsArr) {
-        return seatsArr.map((item,key)=> {
+        return seatsArr.map((item,index)=> {
+            let unselected = item.status ? " seat-selected" : "";
             if (item.typeSeat === "couple") {
-                return  <div className="seat-couple">
-                            <span className="seat"></span>
-                            <span className="seat"></span>
+                return  <div 
+                            className={"seat-couple" + unselected}
+                            key={item.seatName}
+                        >
+                            <span className="seat" data-seat={item.seatName}>{item.seatNumber}</span>
+                            <span className="seat" data-seat={item.seatName}>{item.seatNumber + 1}</span>
                         </div>
-            } else {
-                return <span className="seat"></span>
-            }  
+            }
+            return  <span 
+                        className={"seat" + (item.typeSeat === "vip" ? " seat-vip" : "") + unselected} 
+                        key={item.seatName}
+                        data-seat={item.seatName}
+                    >
+                        {item.seatNumber}
+                    </span>  
         })
     }
+    // render all seats
     let renderAllSeats = function() {
         let seatArr = [];
-        seatsData.forEach((item, key) => {
-            let rowSeat =   <div className="seats-item">
-                                <p className="seats-row">{item.rowSeat}</p>
+        let rowSeat = Object.keys(seatsData)
+        rowSeat.forEach((item, key) => {
+            let rowSeat =   <div className="seats-item" key={key+item}>
+                                <p className="seats-row">{item}</p>
                                 <div className="seats">
-                                    {renderSeats(item.seats)}
+                                    {renderSeats(seatsData[item])}
                                 </div>
                             </div>
             seatArr.push(rowSeat);

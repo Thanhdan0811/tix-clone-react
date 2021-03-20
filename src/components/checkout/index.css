@@ -236,7 +236,7 @@
     margin: 0 5px;
     
     background: #3e515d;
-    color: #e9e9e9;
+    color: transparent;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -248,9 +248,11 @@
     border-radius: 6px;
     background: #b03550;
     margin: 0 10px;
+    color: transparent;
 }
 .seat-couple .seat {
     background: inherit;
+    color: inherit;
     margin: 0;
 }
 .seat-vip {
@@ -277,6 +279,7 @@
     left: 0;
 }
 .seat-on-select {
+    color: #e9e9e9;
     background: #44c020;
 }
 .seats-wrap {

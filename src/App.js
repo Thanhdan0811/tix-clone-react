@@ -8,15 +8,17 @@ import Footer from './components/footer';
 import Header from './components/header';
 import MobileApp from './components/mobile-app';
 import News from './components/news';
+import Profile from './components/profile';
 import SignIn from './components/signin';
 import SignUp from './components/signup';
 
 function App() {
   return (
     <>
-      {/* <Header/> */}
+      <Header/>
+      <Profile/>
       {/* <FilmDetail/> */}
-      <Checkout/>
+      {/* <Checkout/> */}
       {/* <SignIn/> */}
       {/* <SignUp/> */}
       {/* <Banner/> 
@@ -24,8 +26,8 @@ function App() {
       <Cinemas/>
       <News/>
       <MobileApp/> */}
-      {/* <Contacts/> */}
-      {/* <Footer /> */}
+      <Contacts/>
+      <Footer />
     </>
   );
 }
